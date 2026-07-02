@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Pipeline output (generated per-deck; not source of truth)
+out/
+*.tmp
+
+# Regenerable demo fixture (run: python samples/make_sample.py)
+samples/sample_deck.pptx
+
+# OS
+.DS_Store

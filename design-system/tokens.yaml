@@ -1,0 +1,55 @@
+# ALT 통일 디자인 시스템 — 디자인 토큰
+#
+# 이 파일은 "기존 잘 만든 덱"에서 추출해 채웁니다.
+# design-system-extract 스킬이 참조 덱을 분석해 아래 값을 제안하고,
+# 여기 확정된 값이 claude-design-brief.md 로 반영됩니다.
+# (아래는 채우기 전 자리표시 값입니다 — 실제 브랜드 값으로 교체하세요.)
+
+brand:
+  name: "ALT Consulting"
+  logo: "assets/logo.png"          # design-system/assets/ 기준
+  tagline: ""
+
+colors:
+  primary:   "#1A2B4A"   # 주색 (표지/강조)
+  secondary: "#2E6BE6"   # 보조색 (링크/포인트)
+  accent:    "#F5A623"   # 강조색 (하이라이트)
+  text:      "#1C1C1E"   # 본문 텍스트
+  muted:     "#6B7280"   # 보조 텍스트
+  background: "#FFFFFF"  # 슬라이드 배경
+  surface:   "#F4F6F9"   # 카드/박스 배경
+
+typography:
+  heading_font: "Pretendard"      # 제목 폰트
+  body_font:    "Pretendard"      # 본문 폰트
+  mono_font:    "JetBrains Mono"
+  sizes:                          # pt 기준 권장값
+    title: 40
+    section: 32
+    heading: 24
+    body: 16
+    caption: 12
+
+layout:
+  aspect_ratio: "16:9"
+  margins_pt: { top: 48, right: 56, bottom: 48, left: 56 }
+  grid_columns: 12
+  gutter_pt: 16
+
+# 디자인 시스템이 지원하는 슬라이드 레이아웃 (content_model.LayoutHint 와 매칭)
+layouts:
+  - title          # 표지
+  - section        # 섹션 구분
+  - content        # 제목 + 본문
+  - two_column     # 2단
+  - image_text     # 이미지 + 텍스트
+  - image_full     # 전면 이미지
+  - chart          # 차트
+  - table          # 데이터 표
+  - quote          # 인용 / 강조
+
+rules:
+  - "모든 슬라이드 좌상단에 로고, 우하단에 페이지 번호."
+  - "제목은 heading_font, 본문은 body_font 만 사용."
+  - "색은 위 팔레트 내에서만 사용 (임의 색 금지)."
+  - "이미지는 원본 비율 유지, 왜곡/과도한 크롭 금지."
